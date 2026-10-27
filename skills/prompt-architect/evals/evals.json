@@ -1,0 +1,25 @@
+{
+  "skill_name": "prompt-architect",
+  "evals": [
+    {
+      "id": 0,
+      "name": "backend-double-charge",
+      "prompt": "in shop-api (the repo at ~/code/shop-api), customers sometimes get charged twice when they retry payment after a payment gateway timeout. write me a prompt I can give claude to fix this properly",
+      "expected_output": "An engineered prompt grounded in real shop-api files (payment controller/service), with hypothesis-first + failing-test-first process, real verification commands from package.json, and a proof demand",
+      "files": []
+    },
+    {
+      "id": 1,
+      "name": "frontend-chat-lag",
+      "prompt": "the support chat screen in shop-web (repo at ~/code/shop-web) gets really laggy when there are lots of messages, scrolling is janky. turn this into a proper prompt for claude",
+      "expected_output": "An engineered prompt naming real shop-web Chat files, using the screenshot/measure-fix-remeasure loop, Playwright regression, repo styling/perf patterns (e.g. a list virtualization library present in deps)",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "arch-notifications",
+      "prompt": "we want to move sms/email/push notifications in shop-api (repo at ~/code/shop-api) out of inline controller calls into something more reliable. how should I ask claude to design this?",
+      "expected_output": "A design prompt requiring 3 options with tradeoffs/failure modes grounded in the actual stack (e.g. Redis, the SMS/email/push providers in deps), steelman-against-own-pick, ADR output, no code"
+    }
+  ]
+}
